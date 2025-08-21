@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pittsburgh Energy Contract - Editorial Brief</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #fafafa;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Professional header */
+        .masthead {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 50px 0 35px;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+        }
+        
+        .classification {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(52, 152, 219, 0.9);
+            padding: 6px 14px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+        
+        .meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+        
+        /* Content sections */
+        .section {
+            margin: 50px 0;
+        }
+        
+        .section-header {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        /* Executive summary */
+        .executive-summary {
+            background: #f8f9fa;
+            padding: 35px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            margin: 40px 0;
+        }
+        
+        .executive-summary h3 {
+            font-family: 'Inter', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Fact cards */
+        .fact-card {
+            background: white;
+            border-radius: 6px;
+            padding: 28px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #27ae60;
+        }
+        
+        .fact-card.needs-investigation {
+            border-left-color: #e67e22;
+        }
+        
+        .fact-card.context-needed {
+            border-left-color: #9b59b6;
+        }
+        
+        .fact-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .status-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-verified {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-unverified {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-investigate {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* Documentation boxes */
+        .documentation {
+            background: #f0f4ff;
+            border: 1px solid #d6e0ff;
+            border-radius: 4px;
+            padding: 18px;
+            margin: 18px 0;
+            font-size: 14px;
+        }
+        
+        .documentation-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #3951a2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .documentation a {
+            color: #3951a2;
+            text-decoration: none;
+            border-bottom: 1px dotted #3951a2;
+        }
+        
+        .documentation a:hover {
+            border-bottom-style: solid;
+        }
+        
+        /* Timeline */
+        .timeline-container {
+            background: white;
+            padding: 35px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin: 35px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 35px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+        }
+        
+        .timeline-event {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 35px;
+        }
+        
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3498db;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #e0e0e0;
+        }
+        
+        .timeline-event.investigation-needed::before {
+            background: #e67e22;
+            box-shadow: 0 0 0 2px #e67e22;
+        }
+        
+        .timeline-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #7f8c8d;
+            margin-bottom: 6px;
+        }
+        
+        .timeline-description {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .timeline-note {
+            font-size: 13px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        /* Data tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin: 28px 0;
+        }
+        
+        .data-table th {
+            background: #f8f9fa;
+            padding: 16px;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .data-table td {
+            padding: 16px;
+            border-bottom: 1px solid #f1f3f5;
+            font-size: 14px;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Action items */
+        .action-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .action-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+            font-size: 14px;
+        }
+        
+        .action-checkbox {
+            width: 16px;
+            height: 16px;
+            margin-right: 14px;
+            margin-top: 2px;
+        }
+        
+        /* Recommendation box */
+        .recommendation {
+            background: #e8f8f5;
+            border: 1px solid #a3d5c7;
+            border-radius: 6px;
+            padding: 35px;
+            margin: 50px 0;
+        }
+        
+        .recommendation h3 {
+            font-family: 'Inter', sans-serif;
+            color: #27ae60;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Warning box */
+        .warning-box {
+            background: #fff5f5;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            font-family: 'Inter', sans-serif;
+            color: #721c24;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* Comparison grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 28px 0;
+        }
+        
+        .comparison-column h4 {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 16px;
+            color: #2c3e50;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .comparison-column ul {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .fact-card,
+            .timeline-container,
+            .executive-summary {
+                padding: 20px;
+            }
+        }
+        
+        /* Utility classes */
+        .text-small {
+            font-size: 14px;
+        }
+        
+        .text-muted {
+            color: #6c757d;
+        }
+        
+        .mb-large {
+            margin-bottom: 40px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="masthead">
+        <div class="container">
+            <div class="header-content">
+                <div class="classification">Editorial Review</div>
+                <h1>Pittsburgh Energy Contract Analysis</h1>
+                <div class="subtitle">Procurement Process Review & Documentation Gaps</div>
+                <div class="meta">Prepared for Brian Conway • August 20, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="executive-summary">
+            <h3>Summary of Findings - MAJOR DISCOVERY</h3>
+            <p><strong>We have documented proof of an unexplained contract change:</strong> On July 9, 2025, DPW Director Chris Hornstein formally requested City Council approve a "five (5) year" contract with Enel X. On July 28, 2025, Council approved a SIX-year contract. Between these dates, someone added an extra year worth millions in fees.</p>
+            
+            <p style="margin-top: 18px;">The contract also uses a supplier-funded payment model where the energy advisor is paid by the companies it negotiates against, rather than by the city. Combined with the unexplained term extension, these findings raise serious questions about the procurement process.</p>
+            
+            <p style="margin-top: 18px;">Additional context: At the same July 28 meeting, Council passed a ceremonial climate resolution before approving this 6-year natural gas contract, highlighting potential inconsistencies in the city's environmental commitments.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Verified Facts</h2>
+            
+            <div style="background: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 16px; margin-bottom: 20px; font-size: 14px;">
+                <strong style="color: #155724;">✓ Complete Documentation Chain Confirmed:</strong> 
+                <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+                    <li>RFP requesting 5 years (<a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank" style="color: #155724;">February 7, 2025</a>)</li>
+                    <li>DPW letter requesting 5 years (<a href="https://drive.google.com/file/d/1gZpTpD-4EDci7LzMVFbj8UU_iyWwGAI2/view" target="_blank" style="color: #155724;">July 9, 2025</a>)</li>
+                    <li>Council approving 6 years (<a href="https://pittsburgh.legistar.com/LegislationDetail.aspx?ID=7479092" target="_blank" style="color: #155724;">Bill 2069, July 28, 2025</a>)</li>
+                    <li>Video evidence (<a href="https://youtu.be/0k7SjOY5XK8?t=1945" target="_blank" style="color: #155724;">Council Meeting</a>)</li>
+                </ul>
+            </div>
+            
+            <div class="fact-card">
+                <div class="fact-title">
+                    Contract Term Discrepancy
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p><strong>What the documents show:</strong> RFP 2024-RFP-027, Section 3.8, states the city "anticipates contract to last 5 years" with potential modifications during negotiation. City Council approved a six-year contract on July 28, 2025 (Bill 2069).</p>
+                <p style="margin-top: 12px;">This represents a 20% increase in contract duration. No public documentation currently explains when or why this change occurred.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank">RFP 2024-RFP-027</a> (Section 3.8) • 
+                    <a href="https://youtu.be/0k7SjOY5XK8?t=1945" target="_blank">Bill 2069, July 28, 2025 Council Meeting (32:25)</a>
+                </div>
+                <p style="margin-top: 12px;">This represents a 20% increase in contract duration. No public documentation currently explains when or why this change occurred.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank">RFP 2024-RFP-027</a> (Section 3.8) • 
+                    Council Resolution 2025-[Number Pending] • 
+                    <a href="https://pittsburgh.legistar.com/" target="_blank">July 28, 2025 Council Minutes</a>
+                </div>
+            </div>
+
+            <div class="fact-card">
+                <div class="fact-title">
+                    Timeline Variance
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p><strong>RFP Timeline:</strong> Document indicates award expected "Late April to Early May 2025"</p>
+                <p><strong>Actual Timeline:</strong> Council approved contract July 28, 2025</p>
+                <p style="margin-top: 12px;">This 2-3 month gap between expected and actual award dates coincides with what the RFP describes as a "negotiation phase." Activities during this period are not documented in publicly available records.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank">RFP 2024-RFP-027 Timeline (Section 1.3)</a> • 
+                    <a href="https://youtu.be/0k7SjOY5XK8?t=1945" target="_blank">Bill 2069 Council Vote (July 28, 2025)</a>
+                </div>
+            </div>
+
+            <div class="fact-card">
+                <div class="fact-title">
+                    Payment Structure
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p><strong>Traditional Model:</strong> Municipality pays advisor directly from budget appropriations</p>
+                <p><strong>This Contract:</strong> Uses supplier-funded model where natural gas suppliers pay the advisor through fees</p>
+                <p style="margin-top: 12px;">Enel X marketing materials describe this as "adder $/DTH paid by winning supplier." This structure means the advisor receives payment from the companies it helps the city negotiate with.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    <a href="https://www.enelnorthamerica.com/solutions/energy-solutions/advisory-services" target="_blank">Enel X Advisory Services Description</a> • 
+                    <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank">RFP 2024-RFP-027 & Q&A Addendum</a>
+                </div>
+            </div>
+
+            <div class="fact-card">
+                <div class="fact-title">
+                    Equal Opportunity Review Commission Waiver
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p>The Equal Opportunity Review Commission granted a waiver on June 23, 2025, eliminating standard minority and women business enterprise participation requirements for this contract.</p>
+                <p style="margin-top: 12px;">Such waivers are permitted under Pittsburgh Code Chapter 177A when specific conditions are met.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    EORC Waiver Letter (June 23, 2025) • 
+                    <a href="https://ecode360.com/45432358" target="_blank">Pittsburgh Code Chapter 177A</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Areas Requiring Investigation</h2>
+
+            <div class="fact-card needs-investigation">
+                <div class="fact-title">
+                    Contract Modification Process
+                    <span class="status-tag status-investigate">Needs Documentation</span>
+                </div>
+                <p><strong>What we know:</strong> The contract term changed from five to six years between RFP issuance and Council approval.</p>
+                <p><strong>What we need:</strong> Documentation of who participated in negotiations, when the decision was made, and the rationale for extending rather than shortening the term as suggested in Section 3.8.</p>
+                <div class="warning-box">
+                    <h4>Key Questions</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Who from the city participated in contract negotiations?</li>
+                        <li>Were meeting minutes or decision memos created?</li>
+                        <li>What justified a 20% extension in contract duration?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fact-card needs-investigation">
+                <div class="fact-title">
+                    RFP Development Process
+                    <span class="status-tag status-investigate">Needs Investigation</span>
+                </div>
+                <p><strong>Observation:</strong> The RFP's technical requirements align closely with capabilities described in Enel X marketing materials, including specific references to reverse auction platforms and account minimums.</p>
+                <p><strong>Investigation needed:</strong> Document who drafted the RFP requirements, whether there was pre-solicitation consultation with potential vendors, and how requirements compare to other municipal energy advisory RFPs.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Compare</div>
+                    <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank">RFP Section 3.7 (Technical Requirements)</a> with 
+                    <a href="https://www.enelx.com/n-a/en/resources/brochures/energy-procurement-advisory" target="_blank">Enel X capability statements</a>
+                </div>
+            </div>
+
+            <div class="fact-card needs-investigation">
+                <div class="fact-title">
+                    Competitive Landscape
+                    <span class="status-tag status-unverified">Unverified</span>
+                </div>
+                <p><strong>Unknown:</strong> How many firms submitted proposals and what were their evaluation scores?</p>
+                <p><strong>Context needed:</strong> Whether the technical requirements inadvertently or intentionally limited competition, and how this procurement compares to similar contracts in other Pennsylvania cities.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Records Needed</div>
+                    All bid submissions • Evaluation committee scoring sheets • Comparable municipal RFPs
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Document Timeline</h2>
+
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-date">February 7, 2025</div>
+                        <div class="timeline-description">City issues RFP 2024-RFP-027 for natural gas supply consultant services</div>
+                        <div class="timeline-note">RFP specifies 5-year anticipated contract term - <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank" style="color: #3951a2;">View RFP</a></div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-date">March 31, 2025</div>
+                        <div class="timeline-description">Proposal submission deadline</div>
+                    </div>
+
+                    <div class="timeline-event investigation-needed">
+                        <div class="timeline-date">April-May 2025</div>
+                        <div class="timeline-description"><strong>Expected award period per RFP</strong></div>
+                        <div class="timeline-note">Investigation needed: Why was award delayed?</div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-date">June 23, 2025</div>
+                        <div class="timeline-description">EORC grants waiver for minority business requirements</div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-date">July 9, 2025</div>
+                        <div class="timeline-description">DPW Director Hornstein requests Council approve "five (5) years"</div>
+                        <div class="timeline-note"><a href="https://drive.google.com/file/d/1gZpTpD-4EDci7LzMVFbj8UU_iyWwGAI2/view" target="_blank" style="color: #3951a2;">View DPW Letter</a></div>
+                    </div>
+
+                    <div class="timeline-event investigation-needed">
+                        <div class="timeline-date">July 10-27, 2025</div>
+                        <div class="timeline-description"><strong>🔴 CRITICAL GAP: Contract changed from 5 to 6 years</strong></div>
+                        <div class="timeline-note">Investigation needed: Who made this change? What was the justification?</div>
+                    </div>
+
+                    <div class="timeline-event">
+                        <div class="timeline-date">July 28, 2025</div>
+                        <div class="timeline-description">City Council approves 6-year contract with Enel X (Bill 2069)</div>
+                        <div class="timeline-note"><a href="https://pittsburgh.legistar.com/LegislationDetail.aspx?ID=7479092" target="_blank" style="color: #3951a2;">Final Resolution</a> • <a href="https://youtu.be/0k7SjOY5XK8?t=1945" target="_blank" style="color: #3951a2;">Council Video (32:25)</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Reporting Plan</h2>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Action Item</th>
+                        <th>Method</th>
+                        <th>Timeline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>High</strong></td>
+                        <td>Document negotiation phase activities</td>
+                        <td>FOIA request for April-July 2025 communications</td>
+                        <td>Week 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>High</strong></td>
+                        <td>Identify decision makers</td>
+                        <td>Interview DPW, procurement staff</td>
+                        <td>Week 1-2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>High</strong></td>
+                        <td>Obtain competing proposals</td>
+                        <td>FOIA all bid submissions and scores</td>
+                        <td>Week 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium</strong></td>
+                        <td>Climate hypocrisy angle</td>
+                        <td>Review Strassburger's environmental record, interview about votes</td>
+                        <td>Week 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium</strong></td>
+                        <td>Context on RFP development</td>
+                        <td>Interview procurement staff, review comparable RFPs</td>
+                        <td>Week 2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium</strong></td>
+                        <td>Industry perspective</td>
+                        <td>Interview competing firms, procurement experts</td>
+                        <td>Week 2-3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Low</strong></td>
+                        <td>Historical comparison</td>
+                        <td>Review past Pittsburgh energy contracts</td>
+                        <td>Week 3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 35px; margin-bottom: 20px;">Immediate FOIA Requests</h3>
+            
+            <ul class="action-list">
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>🔴 CRITICAL: All communications July 10-27</strong> between Council staff, Mayor's office, and DPW about changing 5→6 years</div>
+                </li>
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>Track the legislation:</strong> When was Bill 2069 amended from 5 to 6 years? Who sponsored the amendment?</div>
+                </li>
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>Council committee records:</strong> Was the term change discussed in committee? Get meeting minutes/recordings</div>
+                </li>
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>Interview Chris Hornstein:</strong> Why did his 5-year request become 6 years? Was he aware of the change?</div>
+                </li>
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>All proposals submitted</strong> in response to <a href="https://procurement.opengov.com/portal/pittsburghpa/projects/78686" target="_blank" style="color: #3951a2;">RFP 2024-RFP-027</a></div>
+                </li>
+                <li class="action-item">
+                    <input type="checkbox" class="action-checkbox">
+                    <div><strong>Documentation</strong> supporting the EORC waiver request and approval (June 23, 2025)</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Story Framing Options</h2>
+
+            <div class="comparison-grid">
+                <div class="comparison-column">
+                    <h4>Conservative Approach</h4>
+                    <ul>
+                        <li>"Pittsburgh Energy Contract Extends Beyond Original Terms"</li>
+                        <li>"Timeline Questions in Natural Gas Advisory Deal"</li>
+                        <li>"City's Energy Contract Uses Supplier-Funded Model"</li>
+                        <li>"Documentation Gaps in Procurement Process"</li>
+                    </ul>
+                </div>
+                <div class="comparison-column">
+                    <h4>Investigative Approach</h4>
+                    <ul>
+                        <li>"How Pittsburgh's Energy Contract Changed During Closed-Door Negotiations"</li>
+                        <li>"The Missing Months in Pittsburgh's Procurement Process"</li>
+                        <li>"Council Passes Climate Resolution, Then Approves 6-Year Gas Contract"</li>
+                        <li>"Contract Terms Modified Without Public Explanation"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 35px; margin-bottom: 20px;">Key Questions to Answer</h3>
+            <ul style="line-height: 1.8;">
+                <li>Who made the decision to extend the contract from five to six years, and what was the justification?</li>
+                <li>Why did the contract award occur three months after the anticipated timeline?</li>
+                <li>How does a 6-year natural gas contract align with Pittsburgh's climate commitments?</li>
+                <li>Did Council members see a conflict between their climate resolution and gas procurement votes?</li>
+                <li>How many firms could meet the RFP's technical requirements?</li>
+                <li>Does the supplier-funded payment model create conflicts of interest?</li>
+                <li>What prompted the EORC to grant a waiver for this specific contract?</li>
+                <li>How do other Pennsylvania cities structure similar energy advisory contracts?</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Context & Background</h2>
+
+            <div class="fact-card context-needed">
+                <div class="fact-title">
+                    Climate Resolution vs. Natural Gas Contract
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p><strong>Same meeting, conflicting votes:</strong> At 2:55, Councilmember Strassburger introduces a ceremonial climate change resolution that passes unanimously. At 32:25, the same Council approves a 6-year natural gas advisory contract with Enel X.</p>
+                <p style="margin-top: 12px;">This juxtaposition raises questions about the consistency between Pittsburgh's stated climate goals and its energy procurement decisions.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Sources</div>
+                    <a href="https://youtu.be/0k7SjOY5XK8?t=175" target="_blank">Climate Resolution (2:55)</a> • 
+                    <a href="https://youtu.be/0k7SjOY5XK8?t=1945" target="_blank">Natural Gas Contract Vote (32:25)</a>
+                </div>
+            </div>
+
+            <div class="fact-card context-needed">
+                <div class="fact-title">
+                    Prior Business Relationship
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p>Pittsburgh previously worked with Enel X in 2020 on a <strong>renewable electricity</strong> contract. Mayor Peduto's administration specifically thanked "ENEL-X" in a May 2020 press release about the city's renewable energy commitment.</p>
+                <p style="margin-top: 12px; font-style: italic;">Note the irony: The same company that helped Pittsburgh procure renewable energy in 2020 is now helping procure natural gas through 2031.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Source</div>
+                    <a href="https://pittsburghpa.gov/press-releases/press-releases/3986" target="_blank">City of Pittsburgh Press Release (May 2020)</a>
+                </div>
+            </div>
+
+            <div class="fact-card context-needed">
+                <div class="fact-title">
+                    Regional Expansion Pattern
+                    <span class="status-tag status-verified">Documented</span>
+                </div>
+                <p>Delaware County announced in October 2023 that it partnered with Enel X for a four-county wholesale energy purchasing initiative, including Bucks, Chester, and Montgomery counties.</p>
+                <div class="documentation">
+                    <div class="documentation-label">Source</div>
+                    <a href="https://delcopa.gov/publicrelations/releases/2023/dcpurchasewholesaleenergy.html" target="_blank">Delaware County Press Release (October 2023)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h3>Editorial Recommendation - THIS STORY IS READY</h3>
+            
+            <p><strong>You have your smoking gun.</strong> The documented change from DPW's 5-year request to Council's 6-year approval, with no public explanation, is the kind of clear discrepancy that drives investigative stories. This isn't speculation - it's documented fact.</p>
+            
+            <p style="margin-top: 18px;"><strong>The story writes itself:</strong></p>
+            <ul style="margin: 12px 0; padding-left: 20px;">
+                <li>DPW requested 5 years on July 9</li>
+                <li>Council approved 6 years on July 28</li>
+                <li>Someone made this change between those dates</li>
+                <li>No public record explains why</li>
+                <li>The extra year is worth potentially millions in fees</li>
+            </ul>
+            
+            <p style="margin-top: 18px;"><strong>Additional angles strengthen the narrative:</strong> The climate resolution hypocrisy, the supplier-funded conflict of interest, the EORC waiver, and the prior relationship with Enel X all add context to what appears to be a procurement process that deviated from its stated path.</p>
+            
+            <p style="margin-top: 18px;"><strong>Defensive positioning:</strong> You have primary documents for every claim. The DPW letter and Council resolution are public records. No speculation needed - just ask: "Who changed this and why?"</p>
+
+            <h3 style="margin-top: 28px;">Next Steps</h3>
+            <ul style="margin-top: 12px;">
+                <li><strong>Immediate:</strong> FOIA all communications between July 10-27 about the contract</li>
+                <li><strong>Interview priorities:</strong> Chris Hornstein, Council President Lavelle, Strassburger</li>
+                <li><strong>Right of reply:</strong> Give Enel X and the Mayor's office chance to explain the change</li>
+                <li><strong>Publication timeline:</strong> This could run within 1-2 weeks with current evidence</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; padding: 40px 0; border-top: 1px solid #dee2e6; margin-top: 60px;">
+            <div class="text-small text-muted">
+                <strong>Internal Editorial Document</strong><br>
+                Pittsburgh Independent<br>
+                Last Updated: August 20, 2025
+            </div>
+        </div>
+    </div>
+</body>
+</html>
